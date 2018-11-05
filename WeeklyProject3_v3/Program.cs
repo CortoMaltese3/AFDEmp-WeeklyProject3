@@ -1,21 +1,36 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace WeeklyProject3_v3
+
+namespace WeeklyProject3_v2
 {
+
     class Program
     {
+
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+
+            //TODO : Check which is better, readalltext? line? convert to list?
+            string studentData = File.ReadAllText(@"C:\Users\giorg\Documents\Coding\AFDEmp\C#\Bi-Weakly Project 3\Lab3.txt");
+            string[] lineData = studentData.Split();
+
+            List<Student> students = new List<Student>();
+
+            Console.WriteLine(lineData[1]);
+
+            /*foreach (string element in lineData)
+            {
+                Student newStudent = new Student();
+                newStudent.FirstName
+            }*/
+
+
+            Console.ReadKey();
         }
     }
+
 }
